@@ -73,18 +73,27 @@ export function Content() {
     <div>
       <Routes>
        <Route path="/about" element={<About />} />
+       <Route path="/signup" element={<Signup />} />
+       <Route path="/login" element={<Login />} />
+       <Route path="/logout" element={<LogoutLink />} />
+       <Route path="/posts/new" element={<PostsNew onPostCreate={handlePostCreate}/>} />
+       <Route path="/" element={<PostsIndex posts={posts} onShowPost={showModal}/>} />
       </Routes>
-      <Signup/>
-      <Login/>
-      <LogoutLink/>
-      <PostsNew onPostCreate={handlePostCreate}/>
+      {/* <Signup/> moved to dif pages with routes
+      <Login/> */}
+       <br />
+       <br />
+       <br />
+       <br />
+       {/* <LogoutLink/> */}
+      {/* <PostsNew onPostCreate={handlePostCreate}/> */}
       <br />
       <br />
       <br />
       <br />
       {/* { <button onClick={handleIndexPosts}>posts from API</button> } */}
       
-      <PostsIndex posts={posts} onShowPost={showModal}/>
+      {/* <PostsIndex posts={posts} onShowPost={showModal}/> */}
       <Modal show={isPostsShowVisible} onClose={closeModal}>
         <PostsShow post={currentPost} onUpdatePost={handleUpdatePost} onDestroyPost={handleDestroyPost} />
       </Modal>
