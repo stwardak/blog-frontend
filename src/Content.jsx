@@ -6,6 +6,9 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
 import { About } from "./About";
+import { Login } from './Login';
+import { LogoutLink } from './LogoutLink';
+import { Signup } from './Signup';
 
 
 
@@ -71,6 +74,9 @@ export function Content() {
       <Routes>
        <Route path="/about" element={<About />} />
       </Routes>
+      <Signup/>
+      <Login/>
+      <LogoutLink/>
       <PostsNew onPostCreate={handlePostCreate}/>
       <br />
       <br />
