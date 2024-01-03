@@ -4,7 +4,10 @@ import { Modal } from './Modal';
 import { PostsShow } from './PostsShow';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { Signup } from './Signup';
+import { Routes, Route } from "react-router-dom";
+import { About } from "./About";
+
+
 
 export function Content() {
   const [posts, setPosts] = useState([]);  
@@ -65,6 +68,9 @@ export function Content() {
 
   return (
     <div>
+      <Routes>
+       <Route path="/about" element={<About />} />
+      </Routes>
       <PostsNew onPostCreate={handlePostCreate}/>
       <br />
       <br />
