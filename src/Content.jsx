@@ -85,7 +85,7 @@ export function Content() {
        <br />
        <br />
        <br />
-       {/* <LogoutLink/> */}
+       <LogoutLink/>
       {/* <PostsNew onPostCreate={handlePostCreate}/> */}
       <br />
       <br />
